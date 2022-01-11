@@ -22,16 +22,13 @@ app = Flask(__name__)
 # Loads pre-trained model
 # model = load_model(r"Static\Models\CovidModelwithLRDecay.h5")
 # model = pickle.load(open('MyApp/Static/Models/CovidModelwithLRDecay.pkl', 'rb'))
-def create_app():
-    with open(r"Static/Models/CovidModelwithLRDecay.json", "r") as file:
-        model_json = file.read()
 
-    global model
-    model = model_from_json(model_json)
-    model.load_weights(r"Static/Models/weights.h5")
-    print("Model loaded successfully.")
+with open(r"Static/Models/CovidModelwithLRDecay.json", "r") as file:
+    model_json = file.read()
 
-    return app
+model = model_from_json(model_json)
+model.load_weights(r"Static/Models/weights.h5")
+print("Model loaded successfully.")
 
 
 def predict(fullpath):
@@ -79,5 +76,4 @@ def send_file(filename):
     return send_from_directory(UPLOAD_FOLDER, filename)
 
 if __name__ == "__main__":
-    app = create_app()
     app.run(debug=True)
