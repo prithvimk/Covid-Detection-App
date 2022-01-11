@@ -4,7 +4,6 @@ from flask import (
     render_template,
     request,
     send_from_directory,
-    after_this_request,
 )
 from tensorflow.keras.preprocessing import image
 import numpy as np
@@ -14,8 +13,8 @@ from tensorflow.python.keras.saving.model_config import model_from_json
 
 
 STATIC = r"Static"
-UPLOAD_FOLDER = r"Static\Uploads"
-MODEL_FOLDER = r"Static\Models"
+UPLOAD_FOLDER = r"Static/Uploads"
+MODEL_FOLDER = r"Static/Models"
 CLASSES = {0: "Covid", 1: "Lung Opacity", 2: "Normal", 3: "Viral Pneumonia"}
 # Initalise the Flask app
 app = Flask(__name__)
@@ -29,7 +28,7 @@ def create_app():
 
     global model
     model = model_from_json(model_json)
-    model.load_weights(r"Static\Models\weights.h5")
+    model.load_weights(r"Static/Models/weights.h5")
     print("Model loaded successfully.")
 
     return app
