@@ -24,7 +24,7 @@ app = Flask(__name__)
 # model = load_model(r"Static\Models\CovidModelwithLRDecay.h5")
 # model = pickle.load(open('MyApp/Static/Models/CovidModelwithLRDecay.pkl', 'rb'))
 def create_app():
-    with open(r"Static\Models\CovidModelwithLRDecay.json", "r") as file:
+    with open(r"Static/Models/CovidModelwithLRDecay.json", "r") as file:
         model_json = file.read()
 
     global model
