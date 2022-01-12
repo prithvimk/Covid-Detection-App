@@ -4,7 +4,7 @@ covid_detection.ipynb
 covidmodel.ipynb
 dataset_analysis.ipynb
 kaggle.json
-Static/Models/covid_vs_normal_model.h5
-Static/Models/CovidModelwithLRDecay.h5
-Static/Models/CovidModelwithLRDecay.pkl
+Static/Models/old
+Static/Models/backups
 pickling.py
+Static/Models/CovidModelwithLRDecay_kaggle.h5
