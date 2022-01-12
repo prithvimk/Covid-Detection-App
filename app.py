@@ -17,7 +17,7 @@ UPLOAD_FOLDER = r"Static/Uploads"
 MODEL_FOLDER = r"Static/Models"
 CLASSES = {0: "Covid", 1: "Lung Opacity", 2: "Normal", 3: "Viral Pneumonia"}
 # Initalise the Flask app
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 # Loads pre-trained model
 # model = load_model(r"Static\Models\CovidModelwithLRDecay.h5")
