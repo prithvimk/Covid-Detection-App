@@ -23,11 +23,11 @@ app = Flask(__name__, template_folder='templates')
 # model = load_model(r"Static\Models\CovidModelwithLRDecay.h5")
 # model = pickle.load(open('MyApp/Static/Models/CovidModelwithLRDecay.pkl', 'rb'))
 
-with open(r"Static\Models\CovidModelwithLRDecay_kaggle.json", "r") as file:
+with open(r"Static/Models/CovidModelwithLRDecay_kaggle.json", "r") as file:
     model_json = file.read()
 
 model = model_from_json(model_json)
-model.load_weights(r"Static\Models\CovidModelwithLRDecay_kaggle_weights.h5")
+model.load_weights(r"Static/Models/CovidModelwithLRDecay_kaggle_weights.h5")
 print("Model loaded successfully.")
 
 
