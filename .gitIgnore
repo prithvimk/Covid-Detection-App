@@ -8,3 +8,6 @@ Static/Models/old
 Static/Models/backups
 pickling.py
 Static/Models/CovidModelwithLRDecay_kaggle.h5
+
+Static/Uploads/*
+!Static/Uploads/.gitkeep
